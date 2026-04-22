@@ -2,7 +2,11 @@ import React, { useState, useEffect, useCallback } from "react";
 
 const STORAGE_KEY = "supplier-payments-v3";
 
-const PKR = (n) =>
+const PKR = (n: number) =>
+  new Intl.NumberFormat("en-PK", {
+    style: "currency",
+    currency: "PKR",
+  }).format(n);
   new Intl.NumberFormat("en-PK", {
     style: "currency",
     currency: "PKR",
