@@ -9,7 +9,7 @@ const PKR = (n: any) =>
     maximumFractionDigits: 0,
   }).format(n || 0);
 
-const fmt = (d) => {
+const fmt = (d: any) => {
   if (!d) return "—";
   return new Date(d).toLocaleDateString("en-GB", {
     day: "2-digit",
