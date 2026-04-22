@@ -9,22 +9,13 @@ const PKR = (n: any) =>
     maximumFractionDigits: 0,
   }).format(n || 0);
 
-const fmt = (d: any) => {
-  if (!d) return "—";
-  return new Date(d).toLocaleDateString("en-GB", {
-    day: "2-digit",
-    month: "short",
-    year: "numeric",
-  });
-};
-
-const fmtFull = (d) => {
+const fmtFull = (d: string | number | Date | null | undefined) => {
   if (!d) return "—";
   return new Date(d).toLocaleDateString("en-GB", {
     weekday: "long",
-    day: "numeric",
-    month: "long",
     year: "numeric",
+    month: "long",
+    day: "numeric",
   });
 };
 
